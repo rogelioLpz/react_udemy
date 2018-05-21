@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {Estado} from './components/Estado'
 import {Parametros} from './components/Parametros'
+import {Condicional} from './components/Condicional'
+import {Ciclos} from './components/Ciclos'
 import logo from './logo.svg';
 import './App.css';
 
@@ -27,10 +29,17 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo"/>
-          <Hello texto="Hola mundo"/>
-          <PrimerComponente texto="Primer componente"/>
+            <div className="row">
+                <div className="col-md-3">
+                    <img src={logo} className="App-logo" alt="logo"/> 
+                </div>
+                <div className="col-md-7">
+                    <PrimerComponente texto="Primer componente"/>
+                    <Hello texto="Hola mundo"/>
+                </div>
+            </div>
         </header>
+
         <div className="container main-container">
             <div className="row">
                 <div className="col-md-6">
@@ -48,6 +57,8 @@ class App extends Component {
                 </div>
                 <div className="col-md-6">
                     <Estado contador={10}/>
+                    <Condicional/>
+                    <Ciclos/>
                 </div>            
             </div>
         </div>
